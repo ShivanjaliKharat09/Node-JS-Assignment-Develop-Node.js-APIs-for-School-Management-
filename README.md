@@ -2,16 +2,42 @@
 
 This repository contains a simple Node.js + Express API to manage schools and list them by proximity to a user location.
 
-## Features
-- Add a school (name, address, latitude, longitude)
-- List schools sorted by distance from a given coordinate (latitude, longitude)
 
-## Quickstart
-1. Copy `.env.example` to `.env` and fill your DB credentials
-2. Run `npm install`
-3. Run the schema SQL in `schema.sql` to create the database/table
-4. Start the server: `npm run dev` (requires nodemon) or `npm start`
+# 📚 School Management API
 
-## Endpoints
-- `POST /addSchool` — body: `{ name, address, latitude, longitude }`
-- `GET /listSchools?latitude=..&longitude=..` — returns schools sorted by distance (km)
+A Node.js + Express.js + MySQL API to manage schools — allowing users to **add** new schools and **list** them sorted by proximity to a given location.
+
+---
+
+## 🚀 Features
+- **Add School** – Save school details (name, address, latitude, longitude) to MySQL.
+- **List Schools** – Retrieve schools sorted by geographical distance from the given coordinates.
+- **Validation** – Ensures proper data format and value ranges.
+- **Distance Calculation** – Uses the Haversine formula in SQL.
+
+---
+
+## 📦 Technologies
+- **Node.js**
+- **Express.js**
+- **MySQL** (with `mysql2/promise`)
+- **express-validator**
+- **dotenv**
+
+---
+
+## 🗄 Database Setup
+
+1. **Create Database**
+```sql
+CREATE DATABASE school_db;
+
+
+
+## Testing the API
+Base URL: https://api.example.com
+Sandbox URL: https://sandbox.api.example.com
+
+Example request:
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     https://sandbox.api.example.com/users

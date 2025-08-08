@@ -41,3 +41,4 @@ Sandbox URL: https://sandbox.api.example.com
 Example request:
 curl -H "Authorization: Bearer YOUR_API_KEY" \
      https://sandbox.api.example.com/users
+
